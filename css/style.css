@@ -1,0 +1,230 @@
+body { 
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body,html { 
+    height: 100%;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background-color: #009F00;
+    height: 100px;
+    justify-content: space-between;
+}
+
+.wrapper { 
+    flex: 1 0 auto;
+}
+
+header img { 
+    height: 50px;
+    margin-left: 10px;
+}
+
+nav {
+    display: block;
+
+}
+
+nav li { 
+    display: inline-block;
+    margin: 15px;
+    padding: 10px;
+    font-family: "roboto";
+}
+
+nav ul { 
+    padding: 0px;   
+}
+
+footer { 
+    background-color: #009F00;
+    text-align: center;
+    font-size: 1.3em;
+    flex-shrink: 0;
+}
+
+.conteiner { 
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*Links*/
+ 
+header a { 
+    color: black;
+    text-decoration: none;
+}
+
+.current { 
+    text-decoration: underline;
+}
+
+nav a:hover { 
+    text-decoration: underline;
+}
+
+.cta-home { 
+    background-color: #009F00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: "roboto";
+    font-size: 1.5em;
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    position: absolute;
+    top: 100px; left: 190px;
+}
+
+.cta-home:hover {
+    text-decoration: underline;
+    background-color: #46b246;
+}
+
+.cta-newsletter { 
+    background-color: #009F00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-family: "roboto";
+    font-size: 0.8em;
+    text-decoration: none;
+    padding: 5px 7px 5px 7px;
+}
+
+.cta-newsletter:hover { 
+   text-decoration: underline;
+   background-color: #46b246;
+}
+
+
+/*Home page*/
+
+.logo  {
+    font-size: 1.7em;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    font-family: "roboto";
+}
+
+.home-img { 
+    background-image: url(../images/jon-tyson-ZA9PHAnVP5g-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 86.9vh;
+    background-position-y: bottom;
+}
+
+.home-content { 
+    position: absolute;
+    top: 450px; left: 740px;
+}
+
+.home-content h1 { 
+    color: white;
+    font-size: 2.5em;
+}
+
+.newsletter { 
+    position: absolute;
+    top: 800px; left: 700px;
+    color: white;
+    font-family: "roboto";
+}
+
+.newsletter h3 { 
+    font-size: 1.5em;
+}
+
+.newsletter input { 
+    font-size: 0.8em;
+}
+
+
+/*About page*/
+
+.about h1 { 
+    text-align: center;
+    font-family: "roboto";
+    font-size: 2.5em;
+}
+
+.about-content h2,p { 
+    font-family: "roboto";
+}
+
+/*Recepies page*/ 
+
+.recepies img { 
+    width: 50px;
+}
+
+.recepies h1 {
+    font-size: 2.5em;
+    font-family: "roboto";
+}
+
+.filter-input h2 {
+    font-family: "roboto";
+    font-size: 1.1em;
+}
+
+/*contact page*/
+
+.contact h1 {
+    font-family: "roboto";
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.contact { 
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-error { 
+    color: red;
+    display: none;
+}
+
+.contact-spesific {
+   display: flex;
+   flex-direction: row;
+   text-align: left;
+   padding: 25px;
+   font-size: 1.1em;
+    font-family: "roboto";
+}
+
+.contact-spesific > * { 
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+input, textarea { 
+    border: 2px solid;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 10px 10px 10px 0px;
+}
+
+textarea { 
+    height: 75%;
+    min-height: 100px;
+}
+
+.cta-contact { 
+    width: 100px;
+    font-size: 1.2em;
+    font-family: "roboto";
+}
+
+
