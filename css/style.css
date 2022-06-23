@@ -35,10 +35,19 @@ nav li {
     margin: 15px;
     padding: 10px;
     font-family: "roboto";
+    
 }
 
 nav ul { 
     padding: 0px;   
+}
+
+#hamburger-menu { 
+    display: none;
+}
+
+#hamburger-menu:checked ~ nav { 
+    display: block;
 }
 
 footer { 
@@ -196,7 +205,7 @@ nav a:hover {
 
 .contact-spesific {
    display: flex;
-   flex-direction: row;
+   flex-direction: column;
    text-align: left;
    padding: 25px;
    font-size: 1.1em;
@@ -225,6 +234,18 @@ textarea {
     width: 100px;
     font-size: 1.2em;
     font-family: "roboto";
+}
+
+/*Media*/ 
+
+@media (min-width: 600px) { 
+    .contact-spesific { 
+        flex-direction: row;
+    }
+
+    header label {
+        display: none;
+      }
 }
 
 
