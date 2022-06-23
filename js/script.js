@@ -1,15 +1,22 @@
-const options = {
-  method: "GET",
-  headers: {
-    "X-RapidAPI-Key": "04cb0425dcmshc9f49d59b2b0019p106277jsn0da7af42f157",
-    "X-RapidAPI-Host": "tasty.p.rapidapi.com",
-  },
-};
+/*import { baseUrl } from "./constants/api.js";
+const productsUrl = baseUrl;
+const conteiner = document.querySelector(".products-conteiner")(
+  async function () {
+    try {
+      const response = await fetch(productsUrl);
+      const products = await response.json();
+      createHTML(products);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+)();
 
-fetch(
-  "https://tasty.p.rapidapi.com/recipes/auto-complete?prefix=chicken%20soup",
-  options
-)
-  .then((response) => response.json())
-  .then((response) => console.log(response))
-  .catch((err) => console.error(err));
+function createHTML(products) {
+  for (let i = 0; i < products.length; i++) {
+    conteiner.innerHTML += `<div class="product"
+                                <h4>${product.abbreviated_product_name}
+                                </h4>
+                             </div>`;
+  }
+}*/
