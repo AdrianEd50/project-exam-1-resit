@@ -16,22 +16,3 @@ export function searchForRecepies(recepies) {
     result(filteredRecepies);
   };
 }
-
-/*export function getRecepies(recepiesToGet) {
-  const conteiner = document.querySelector(".products-conteiner");
-
-  conteiner.innerHTML = "";
-
-  recepiesToGet.forEach(function (result) {
-    conteiner.innerHTML += `<div>
-                         <h4>${result.name}</h4>
-                         <h4>${result.description}</h4>
-                         <h4>${result.yields}</h4>
-
-                         <img src="${result.thumbnail_url}" alt="${result.name}"/>
-                         
-                        </div>`;
-  });
-
-  //getRecepies();
-}*/

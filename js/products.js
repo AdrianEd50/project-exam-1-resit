@@ -35,11 +35,7 @@ fetch(
       });
     }
 
-    //renderRecepies();
-
     search.onkeyup = function () {
-      //console.log(event);
-
       const searchValue = event.target.value.trim().toLowerCase();
       const filterRecepies = recepiesToRender.filter(function (recepie) {
         if (recepie.name.toLowerCase().includes(searchValue)) {
@@ -50,7 +46,6 @@ fetch(
       console.log(filterRecepies);
 
       recepiesToRender = filterRecepies;
-      //recepiesToRender();
 
       renderRecepies();
     };

@@ -188,6 +188,11 @@ nav a:hover {
     width: 50px;
 }
 
+.recepies { 
+    padding: 10px;
+    text-align: center;
+}
+
 .recepies h1 {
     font-size: 2.5em;
     font-family: "roboto";
@@ -294,6 +299,11 @@ textarea {
 .cta-home { 
     position: absolute;
     top: 80px; left: 140px;
+}
+
+.recepies { 
+    padding: 10px;
+    text-align: left;
 }
 
 }
