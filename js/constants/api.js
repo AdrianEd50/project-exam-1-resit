@@ -1,1 +1,1 @@
-export const baseUrl = "https://world.openfoodfacts.org/?json=true";
+//export const baseUrl = "http://localhost:1337/";

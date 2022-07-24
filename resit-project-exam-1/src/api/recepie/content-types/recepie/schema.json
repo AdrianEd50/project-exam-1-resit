@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "recepies",
+  "info": {
+    "singularName": "recepie",
+    "pluralName": "recepies",
+    "displayName": "recepie"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "ingredient": {
+      "type": "string"
+    },
+    "Grams": {
+      "type": "decimal"
+    },
+    "recepie": {
+      "type": "string"
+    }
+  }
+}

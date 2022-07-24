@@ -1,37 +1,59 @@
-const url = "https://world.openfoodfacts.org/?json=true";
+import { searchForRecepies } from "./ui/findRecepie.js";
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "04cb0425dcmshc9f49d59b2b0019p106277jsn0da7af42f157",
+    "X-RapidAPI-Host": "tasty.p.rapidapi.com",
+  },
+};
 
-const productsConteiner = document.querySelector(".products-conteiner");
+fetch(
+  "https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&tags=under_30_minutes",
+  options
+)
+  .then((response) => response.json())
+  .then((response) => {
+    console.log(response);
 
-async function findProducts() {
-  const response = await fetch(url);
-  console.log(response);
+    const conteiner = document.getElementById("products-conteiner");
+    const search = document.querySelector(".search");
 
-  const json = await response.json();
-  console.log(json);
+    let recepiesToRender = response.results;
 
-  const prod = json.products;
+    function renderRecepies() {
+      conteiner.innerHTML = "";
 
-  productsConteiner.innerHTML = "";
+      recepiesToRender.forEach(function (result) {
+        conteiner.innerHTML += `<div class ="featured-recepies">
+                               <h4 class="heading">${result.name}</h4>
+                               <h4 class="description">${result.description}</h4>
+                               <h4>${result.yields}</h4>
 
-  for (let i = 0; i < prod.length; i++) {
-    console.log(prod[i].abbreviated_product_name);
+                               <img src="${result.thumbnail_url}" alt="${result.name}"/>
+                               
+                              </div>`;
+      });
+    }
 
-    productsConteiner.innerHTML += `<div class="result">${prod[i].abbreviated_product_name}</div>`;
-  }
-}
+    //renderRecepies();
 
-findProducts();
+    search.onkeyup = function () {
+      //console.log(event);
 
-/*import { baseUrl } from "./constants/api.js";
-import { findProducts } from "./ui/findProduct.js";
+      const searchValue = event.target.value.trim().toLowerCase();
+      const filterRecepies = recepiesToRender.filter(function (recepie) {
+        if (recepie.name.toLowerCase().includes(searchValue)) {
+          return true;
+        }
+      });
 
-const productsUrl = baseUrl;
+      console.log(filterRecepies);
 
-(async function () {
-  const response = await fetch(productsUrl);
-  const json = await response.json();
+      recepiesToRender = filterRecepies;
+      //recepiesToRender();
 
-  console.log(json);
+      renderRecepies();
+    };
+  })
 
-  findProducts(products);
-})();*/
+  .catch((err) => console.error(err));
