@@ -1,4 +1,4 @@
-<h1>Community Science Museum</h1>
+<h1>Good Food Mood</h1>
 
 <p>This is my project exam 1 resit that is called Good Food Mood. It is a site where you can find different food recepies by what you are searching for.</p>
 
